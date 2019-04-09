@@ -1,0 +1,57 @@
+@import "../../../variables.scss";
+
+.product-card {
+  margin-top:3rem;
+  & a:hover {
+    text-decoration: none;
+  }
+  .badge {
+    background: #000;
+    color: #fff;
+    position: absolute;
+    font-size: 1.05rem;
+    right: 0.5rem;
+    top: 0.5rem;
+    padding: 0.35rem;
+  }
+  h5 {
+    margin-bottom: 0.25rem;
+  }
+  .card-title {
+    margin-top: 2rem;
+    font-weight: bold;
+    color: $heading-color;
+    height: 3rem;
+    overflow: hidden;
+  }
+  .card-text {
+    color: $subheading-color;
+    height: 3rem;
+    overflow: hidden;
+  }
+  &__price {
+    font-weight: bold;
+    color: $heading-color;
+  }
+  &__subprice {
+    color: $subheading-color;
+  }
+
+  &__img {
+    height: 12rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    &-inner{
+      max-height:100%;
+      img {      
+        max-width: 100%;
+        width:auto;
+        max-height:100%;        
+      }
+    }
+  }
+}
+
+
+

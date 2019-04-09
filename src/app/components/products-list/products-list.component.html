@@ -1,0 +1,33 @@
+<div class="container-fluid">
+  <div class="row">
+    <div
+      class="product-card col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2"
+      *ngFor="let p of products"
+    >
+      <a [routerLink]="['/product', p.title]">
+        <div class="card text-center ">
+          <div class="badge product-card__discount">-{{ p.discount }}%</div>
+          <div class="card-body">
+            <div class="product-card__img">
+              <div class="product-card__img-inner">
+                <img
+                  src="./assets/{{ p.img }}"
+                  class="card-img-top"
+                  alt="{{ p.title }}"
+                />
+              </div>
+            </div>
+            <h5 class="card-title">{{ p.title }}</h5>
+            <div class="card-text">
+              <p>{{ p.subtitle }}</p>
+            </div>
+          </div>
+          <div class="card-footer text-muted">
+            <h5 class="product-card__price">{{ p.price }}</h5>
+            <div class="product-card__subprice">statt {{ p.subprice }}</div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
