@@ -19,7 +19,7 @@ app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({extended: true, limit: '50mb' }));
 
 // Angular DIST output folder
-app.use(express.static(path.join(__dirname, 'dist/workspan')));
+app.use(express.static(path.join(__dirname, 'dist/refurb')));
 
 //CORS
 app.use(function(req, res, next) {
@@ -35,7 +35,7 @@ app.use(function(req, res, next) {
 // Send all other requests to the Angular app
 /**/
 app.get('*', (req, res) => {
-	res.sendFile(path.join(__dirname, 'dist/workspan/index.html'));
+	res.sendFile(path.join(__dirname, 'dist/refurb/index.html'));
 });
 
 app.disable('etag');
